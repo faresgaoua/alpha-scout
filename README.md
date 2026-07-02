@@ -43,7 +43,7 @@ During initial testing on the Barcelona 2020/2021 dataset, certain players didn'
 To "fix" this, I initially built complex conditional clauses (e.g., checking if age was under 21, adding custom superstar bonuses, or step-function injury haircuts) to force the output to match my intuition. 
 
 ### The Realization: Breaking Generalizability
-I quickly realized that adding ad-hoc, player-specific patches was leading to massive overfitting. I was building a model tailored exclusively to one specific team in one specific season. If launched on Arsenal, Real Madrid, or Brighton, the engine would have collapsed. In quantitative finance, a pricing model must remain universally applicable and generalizable.
+I quickly realized that adding ad-hoc, player-specific patches was leading to massive overfitting. I was building a model tailored exclusively to one specific team in one specific season. If launched on another set of players the engine would have collapsed. In quantitative finance, a pricing model must remain universally applicable and generalizable.
 
 ### The Solution: The Continuous Zero-Threshold Framework (Definitive Version)
 In this definitive version, I stripped away all rule-based thresholds and hardcoded exceptions to combat overfitting. The engine now relies strictly on continuous, monotonic mathematical functions to handle risk and liquidity:
